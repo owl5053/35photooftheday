@@ -36,7 +36,7 @@ Set objWshShell = WScript.CreateObject("Wscript.Shell")
 'objWshShell.Run "%windir%\System32\RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters", 1, False
 
 'use irfanview if you want
-objWshShell.Run Chr(34) & "C:\Program Files\IrfanView\i_view64.exe" & Chr(34) & " " & Chr(34) & photoday & Chr(34) & " /wall=0 /killmesoftly", 1, False 
+objWshShell.Run Chr(34) & "c:\Programs\IrfanView\i_view64.exe" & Chr(34) & " " & Chr(34) & photoday & Chr(34) & " /wall=2 /killmesoftly", 1, False 
 
 Set oXMLHTTP2 = Nothing
 Set oADOStream = Nothing
