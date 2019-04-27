@@ -3,14 +3,14 @@ dim photoday, lnk, sUrlRequest
 set FSO=CreateObject ("Scripting.FileSystemObject")
 photoday = fso.GetSpecialFolder(2): if right(bingfile,1)<>"\" then photoday=photoday & "\" : photoday = photoday & "35photo.jpg"
 
-sUrlRequest = "http://ru.35photo.ru/rss/photo_day.xml"
+sUrlRequest = "https://35photo.pro/rss/photo_day.xml"
 Set oXMLHTTP = CreateObject("MSXML2.XMLHTTP")
 oXMLHTTP.Open "GET", sUrlRequest, False
 oXMLHTTP.Send
 xmlfile=oXMLHTTP.Responsetext
 Set oXMLHTTP = Nothing
 
-
+msgbox xmlfile
 beg=instr(lcase(xmlfile),"img src=")
 ef=instr(lcase(xmlfile),".jpg")
 lnk=mid(xmlfile,beg+14,ef-beg-10)
