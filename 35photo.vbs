@@ -10,7 +10,6 @@ oXMLHTTP.Send
 xmlfile=oXMLHTTP.Responsetext
 Set oXMLHTTP = Nothing
 
-msgbox xmlfile
 beg=instr(lcase(xmlfile),"img src=")
 ef=instr(lcase(xmlfile),".jpg")
 lnk=mid(xmlfile,beg+14,ef-beg-10)
