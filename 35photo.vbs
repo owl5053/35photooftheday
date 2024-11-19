@@ -43,10 +43,10 @@ oADOStream.Write oXMLHTTP2.ResponseBody
 oADOStream.SaveToFile photoday, 2
 
 Set objWshShell = WScript.CreateObject("Wscript.Shell")
-<<<<<<< HEAD
+
 
 SetWallpaper photoday
-=======
+
 'use OS to set wallpaper
 'objWshShell.RegWrite "HKEY_CURRENT_USER\Control Panel\Desktop\Wallpaper", photoday, "REG_SZ"
 'objWshShell.Run "%windir%\System32\RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters", 1, False
@@ -54,7 +54,7 @@ Set objFile = FSO.GetFile(photoday)
 Set objShellApp = CreateObject("Shell.Application")
 Set objFolder = objShellApp.Namespace(FSO.GetParentFolderName(objFile))
 objFolder.ParseName(FSO.GetFileName(objFile)).InvokeVerb "setdesktopwallpaper"
->>>>>>> ab77534ea79473db7ccb8779a88533bc3dc26911
+
 
 
 'use irfanview if you want
